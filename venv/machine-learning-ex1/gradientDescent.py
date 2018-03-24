@@ -4,14 +4,14 @@ from computeCost import compute_cost
 
 def gradient_descent(X, y, thetas, alpha, iterations):
     m = len(y)
-    t = thetas
+    t = thetas.copy()
     j_history = []
 
     for _ in range(iterations):
-        temptheta = t
-        j_history.append(compute_cost(X, y, temptheta))
+        temptheta = t.copy()
+        j_history.append(compute_cost(X, y, temptheta))  # Record cost
         for j in range(len(temptheta)):
-            x = np.array(X[:, j]).reshape(len(X), 1)
+            x = np.array(X[:, j]).reshape(len(X), 1)  # Slice x-sub-j feature
             temptheta[j] = t[j] - ((alpha/m) * np.sum((h(X, t) - y)*x))
         t = temptheta
 

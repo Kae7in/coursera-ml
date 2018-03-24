@@ -10,10 +10,10 @@ from computeCost import compute_cost
 from gradientDescent import gradient_descent
 
 if __name__ == '__main__':
-    #  ==================== Part 1: Basic Function ====================
-    # print(id_matrix())  # warmUpExercise
+    ''' ==================== Part 1: Basic Function ==================== '''
+    print(id_matrix())  # warmUpExercise
 
-    #  ==================== Part 2: Plotting ==========================
+    ''' ==================== Part 2: Plotting ========================== '''
     # Read the data file
     data = np.loadtxt('ex1data1.txt', delimiter=',')
 
@@ -29,22 +29,25 @@ if __name__ == '__main__':
     plt.axis([0, 25, -5, 25])
     plt.show()
 
-    #  ==================== Part 3: Cost and Gradient descent =========
-    thetas = np.zeros((2, 1))
+    ''' ==================== Part 3: Cost and Gradient descent ========= '''
+    # Add x-sub-0 (vector of 1's)
     X = np.concatenate((np.ones((m, 1)), x), axis=1)
 
+    # Test thetas
+    thetas = np.zeros((2, 1))
     cost = compute_cost(X, y, thetas)
-    print(cost)
+    print('Cost using thetas(2, 1): ', cost)
 
+    # Test different thetas
     thetas = np.array([[-1.0], [2.0]])
     cost = compute_cost(X, y, thetas)
-    print(cost)
+    print('Cost using thetas(-1, 2): ', cost)
 
-    # Find thetas using gradient descent.
+    # Find optimal thetas using gradient descent
     iterations = 1500
     alpha = 0.01
     thetas, j_history = gradient_descent(X, y, thetas, alpha, iterations)
-    print(thetas)
+    # print(thetas)
 
     # Show best fit line.
     plt.figure()
@@ -61,7 +64,7 @@ if __name__ == '__main__':
     predict2 = np.dot([[1, 7]], thetas)  # Predict profit for population of 70,000
     print('For population = 70,000, we predict a profit of\n', predict2 * 10000)
 
-    #  ==================== Part 4: Visualizing J(theta_0, theta_1) ===
+    ''' ==================== Part 4: Visualizing J(theta_0, theta_1) === '''
     print('Visualizing J(theta_0, theta_1) ...\n')
 
     # Grid over which we will calculate J
@@ -79,10 +82,11 @@ if __name__ == '__main__':
 
     J_vals = np.swapaxes(J_vals, 0, 1)
 
+    # Plot surface
     fig = plt.figure()
     ax = fig.gca(projection='3d')
-    meshx, meshy = np.meshgrid(theta0_vals, theta1_vals)
-    surf = ax.plot_surface(meshx, meshy, J_vals, cmap=cm.coolwarm,
+    mesh_x, mesh_y = np.meshgrid(theta0_vals, theta1_vals)
+    surf = ax.plot_surface(mesh_x, mesh_y, J_vals, cmap=cm.coolwarm,
                            linewidth=0, antialiased=False)
     plt.show()
 
