@@ -2,8 +2,6 @@ import matplotlib as plt
 plt.use('TkAgg')
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-from matplotlib import cm
-import csv
 import numpy as np
 from warmUpExercise import id_matrix
 from computeCost import compute_cost
