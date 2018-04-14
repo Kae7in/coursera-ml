@@ -38,3 +38,4 @@ if __name__ == '__main__':
 
     J, gradient = cost_function(theta, X, y)
     print(J)
+    print(gradient)

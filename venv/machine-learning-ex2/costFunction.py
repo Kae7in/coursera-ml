@@ -39,8 +39,15 @@ def cost_function(theta, X, y):
     m = len(y)
     J = 0
     gradient = np.zeros((len(theta), 1))
+    t = theta.copy()
 
+    # Compute cost
     J = (1/m) * np.sum((-y * np.log(h(X, theta))) - ((1-y) * np.log(1-h(X, theta))))
+
+    # Compute gradient
+    for j in range(len(t)):
+        x_j = np.array(X[:, j]).reshape(len(X), 1)  # Slice x-sub-j feature
+        gradient = (1/m) * np.sum((h(X, theta) - y) * x_j)
 
     return J, gradient
 
