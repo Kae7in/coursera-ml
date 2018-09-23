@@ -36,20 +36,27 @@ from sigmoid import sigmoid
 
 
 def cost_function(theta, X, y):
-    m = len(y)
-    J = 0
-    gradient = np.zeros((len(theta), 1))
-    t = theta.copy()
+    m = y.size
+    sig = sigmoid(X.dot(theta))
 
-    # Compute cost
-    J = (1/m) * np.sum((-y * np.log(h(X, theta))) - ((1-y) * np.log(1-h(X, theta))))
+    J = -1 * (1 / m) * (np.log(sig).T.dot(y) + np.log(1 - sig).T.dot(1 - y))
+
+    if np.isnan(J[0]):
+        return (np.inf)
+    return (J[0])
+
+
+def gradient(theta, X, y):
+    m = len(y)
+    t = theta.reshape(-1, 1)
+    gradient = np.zeros((len(t), 1))
 
     # Compute gradient
-    for j in range(len(t)):
+    for j in range(len(gradient)):
         x_j = np.array(X[:, j]).reshape(len(X), 1)  # Slice x-sub-j feature
-        gradient = (1/m) * np.sum((h(X, theta) - y) * x_j)
+        gradient[j] = (1 / m) * np.sum((h(X, t) - y) * x_j)
 
-    return J, gradient
+    return gradient.flatten()
 
 
 def h(x, theta):
