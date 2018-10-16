@@ -35,7 +35,7 @@ import numpy as np
 from sigmoid import sigmoid
 
 
-def cost_function(theta, X, y):
+def compute_cost(theta, X, y):
     m = y.size
     sig = sigmoid(X.dot(theta))
 
@@ -46,7 +46,7 @@ def cost_function(theta, X, y):
     return (J[0])
 
 
-def gradient(theta, X, y):
+def compute_gradient(theta, X, y):
     m = len(y)
     t = theta.reshape(-1, 1)
     gradient = np.zeros((len(t), 1))

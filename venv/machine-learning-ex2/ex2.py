@@ -5,8 +5,9 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 import numpy as np
 from plotData import plot_data
-from costFunction import cost_function, gradient
+from costFunction import compute_cost, compute_gradient
 from scipy.optimize import minimize
+from sigmoid import sigmoid
 
 
 if __name__ == '__main__':
@@ -16,23 +17,24 @@ if __name__ == '__main__':
     data = np.loadtxt('ex2data1.txt', delimiter=',')
 
     # Store the strings as float arrays
-    X = np.array(data[:, :2])
+    x = np.array(data[:, :2])
     y = np.array(data[:, 2]).reshape(len(data), 1)
     m = len(data)
 
     # Plot the data
-    # plot_data(X, y)
+    plot_data(x, y)
 
     # Add x-sub-0 (vector of 1's)
-    X = np.concatenate((np.ones((m, 1)), X), axis=1)
+    X = np.concatenate((np.ones((m, 1)), x), axis=1)
 
-    theta = np.zeros(X.shape[1])
+    t = np.zeros((X.shape[1], 1))
 
-    J = cost_function(theta, X, y)
-    grad = gradient(theta, X, y)
-    print(J)
-    print(grad)
+    J = compute_cost(t, X, y)
+    gradient = compute_gradient(t, X, y)
 
-    result = minimize(cost_function, theta, args=(X, y), method=None, jac=gradient, options={'maxiter': 4m00})
+    result = minimize(compute_cost, t, args=(X, y), method=None, jac=compute_gradient, options={'maxiter': 400})
 
-    print(result)
+    sample_test = np.array([1, 45, 85])
+    print(sigmoid(np.dot(sample_test, result.x.T)))
+
+    plot_data(x, y, result.x.T)

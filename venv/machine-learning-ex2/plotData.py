@@ -4,34 +4,29 @@ plt.use('TkAgg')
 import matplotlib.pyplot as plt
 
 
-''' This is a longer but more efficient implementation that avoids calling plt.scatter() for every data point. '''
-def plot_data(X, y):
-    X_admitted = np.array([], ndmin=2)
-    X_not_admitted = np.array([], ndmin=2)
-
-    for row in range(len(X)):  # Group admitted and not-admitted data points into separate matrices
-        if y[row]:
-            X_admitted = np.append(X_admitted, X[row])
-        else:
-            X_not_admitted = np.append(X_not_admitted, X[row])
+def plot_data(X, y, theta=np.array([])):
+    """ Plot student admission data on a graph """
 
     # Set y and x axis labels for scatter plot
     plt.ylabel('Exam 2 score')
     plt.xlabel('Exam 1 score')
 
-    # Now we can call plt.scatter for the entire admitted group
-    X_admitted = X_admitted.reshape(int(len(X_admitted)/2), 2)
-    x1 = X_admitted[:, :1]
-    x2 = X_admitted[:, 1:]
-    plt.scatter(x1, x2, marker='+', label='Admitted', c='black')
+    admitted = np.where(y == 1)[0]
+    not_admitted = np.where(y == 0)[0]
 
-    # Similarly, we call plt.scatter for the entire not-admitted group
-    X_not_admitted = X_not_admitted.reshape(int(len(X_not_admitted)/2), 2)
-    x1 = X_not_admitted[:, :1]
-    x2 = X_not_admitted[:, 1:]
-    plt.scatter(x1, x2, marker='o', label='Not admitted', c='yellow', edgecolors='black')
+    # Plot all admitted students
+    plt.scatter(X[admitted, :1], X[admitted, 1:], marker='+', label='Admitted', c='black')
+
+    # Plot all non-admitted students
+    plt.scatter(X[not_admitted, :1], X[not_admitted, 1:], marker='o', label='Not admitted', c='yellow', edgecolors='black')
 
     # Set legend for scatter plot
     plt.legend(loc='upper right', fontsize=8)
+
+    # Show best fit line
+    if theta.size != 0:
+        x_coords = np.array([np.min(X[:, 1]), np.max(X[:, 1])])
+        y_coords = (-1/theta[2])*(theta[0] + theta[1]*x_coords)
+        plt.plot(x_coords, y_coords, 'b-', label='Decision boundary')
 
     plt.show()
