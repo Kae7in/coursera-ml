@@ -35,26 +35,24 @@ import numpy as np
 from sigmoid import sigmoid
 
 
-def compute_cost(theta, X, y):
+def compute_cost(theta, X, y, lamb=0):
     m = y.size
-    sig = sigmoid(X.dot(theta))
 
-    J = -1 * (1 / m) * (np.log(sig).T.dot(y) + np.log(1 - sig).T.dot(1 - y))
+    J = (1 / m) * (-y.T.dot(np.log(h(X, theta))) - (1 - y).T.dot(np.log(1 - h(X, theta)))) \
+        + (lamb / (2 * m)) * np.sum(np.power(theta[1:], 2))
 
     if np.isnan(J[0]):
-        return (np.inf)
-    return (J[0])
+        return np.inf
+    return J[0]
 
 
-def compute_gradient(theta, X, y):
+def compute_gradient(theta, X, y, lamb=0):
     m = len(y)
     t = theta.reshape(-1, 1)
     gradient = np.zeros((len(t), 1))
 
     # Compute gradient
-    for j in range(len(gradient)):
-        x_j = np.array(X[:, j]).reshape(len(X), 1)  # Slice x-sub-j feature
-        gradient[j] = (1 / m) * np.sum((h(X, t) - y) * x_j)
+    gradient = ((1 / m) * np.dot((h(X, t) - y).T, X)) + (float(lamb / m) * theta)
 
     return gradient.flatten()
 

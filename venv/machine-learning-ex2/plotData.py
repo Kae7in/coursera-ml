@@ -1,7 +1,9 @@
 import numpy as np
 import matplotlib as plt
+from matplotlib import pyplot
 plt.use('TkAgg')
 import matplotlib.pyplot as plt
+from mapFeature import mapFeature
 
 
 def plot_data(X, y, theta=np.array([])):
@@ -25,8 +27,26 @@ def plot_data(X, y, theta=np.array([])):
 
     # Show best fit line
     if theta.size != 0:
-        x_coords = np.array([np.min(X[:, 1]), np.max(X[:, 1])])
-        y_coords = (-1/theta[2])*(theta[0] + theta[1]*x_coords)
-        plt.plot(x_coords, y_coords, 'b-', label='Decision boundary')
+        if theta.size <= 3:
+            x_coords = np.array([np.min(X[:, 1]), np.max(X[:, 1])])
+            y_coords = (-1/theta[2])*(theta[0] + theta[1]*x_coords)
+            plt.plot(x_coords, y_coords, 'b-', label='Decision boundary')
+        else:
+            # Here is the grid range
+            u = np.linspace(-1, 1.5, 50)
+            v = np.linspace(-1, 1.5, 50)
+
+            z = np.zeros((u.size, v.size))
+            # Evaluate z = theta*x over the grid
+            for i, ui in enumerate(u):
+                for j, vj in enumerate(v):
+                    z[i, j] = np.dot(mapFeature(ui, vj), theta)
+
+            z = z.T  # important to transpose z before calling contour
+            # print(z)
+
+            # Plot z = 0
+            pyplot.contour(u, v, z, levels=[0], linewidths=2, colors='g')
+            pyplot.contourf(u, v, z, levels=[np.min(z), 0, np.max(z)], cmap='Greens', alpha=0.4)
 
     plt.show()
