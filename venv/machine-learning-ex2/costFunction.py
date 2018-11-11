@@ -49,10 +49,14 @@ def compute_cost(theta, X, y, lamb=0):
 def compute_gradient(theta, X, y, lamb=0):
     m = len(y)
     t = theta.reshape(-1, 1)
+    y = y.reshape((len(y), 1))
     gradient = np.zeros((len(t), 1))
 
+    masked_t = np.array(t)
+    masked_t[0] = 0
+
     # Compute gradient
-    gradient = ((1 / m) * np.dot((h(X, t) - y).T, X)) + (float(lamb / m) * theta)
+    gradient = (1 / m) * np.dot((h(X, t) - y).T, X).reshape((len(X.T), 1)) + ((lamb / m) * masked_t)
 
     return gradient.flatten()
 

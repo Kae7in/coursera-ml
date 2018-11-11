@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07cde05f-266a-4466-be6f-e1761a31c8b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/machine-learning-ex2/ex2data2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/machine-learning-ex2/mapFeature.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/machine-learning-ex3/ex3/sigmoid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/machine-learning-ex2/costFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine-learning-ex2/costFunction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine-learning-ex2/ex2.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine-learning-ex2/ex2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine-learning-ex2/plotData.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine-learning-ex2/plotData.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,24 +23,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="6519" />
+          <entry key="dummy" value="12" />
+          <entry key="py" value="9890" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="6519" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Python" value="9890" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="21" />
+          <entry key="m" value="4" />
+          <entry key="mat" value="1" />
+          <entry key="py" value="55" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="21" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Python" value="55" />
         </counts>
       </usages-collector>
     </session>
@@ -54,22 +55,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/machine-learning-ex2/ex2.py">
+        <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/ex3_nn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="210">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#32#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/machine-learning-ex2/costFunction.py">
+        <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="493">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
-                <element signature="e#961#979#0" expanded="true" />
-                <marker date="1540705133815" expanded="true" signature="1444:1665" ph="..." />
+                <element signature="e#1090#1108#0" expanded="true" />
+                <marker date="1541909602359" expanded="true" signature="1170:1171" ph="..." />
               </folding>
             </state>
           </provider>
@@ -93,6 +97,9 @@
       <find>x.dot</find>
       <find>ma</find>
       <find>plt</find>
+      <find>/</find>
+      <find>all_thet</find>
+      <find>predict</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,7 +114,17 @@
         <option value="$PROJECT_DIR$/machine-learning-ex2/mapFeature.py" />
         <option value="$PROJECT_DIR$/machine-learning-ex2/plotData.py" />
         <option value="$PROJECT_DIR$/machine-learning-ex2/ex2.py" />
+        <option value="$PROJECT_DIR$/machine-learning-ex3/ex3/ex3.m" />
+        <option value="$PROJECT_DIR$/machine-learning-ex3/ex3/ex3_nn.m" />
+        <option value="$PROJECT_DIR$/machine-learning-ex3/ex3/displayData.m" />
+        <option value="$PROJECT_DIR$/machine-learning-ex3/ex3/display_data.py" />
         <option value="$PROJECT_DIR$/machine-learning-ex2/costFunction.py" />
+        <option value="$PROJECT_DIR$/machine-learning-ex3/ex3/predict_one_vs_all.py" />
+        <option value="$PROJECT_DIR$/machine-learning-ex3/ex3/lr_cost_function.py" />
+        <option value="$PROJECT_DIR$/machine-learning-ex3/ex3/one_vs_all.py" />
+        <option value="$PROJECT_DIR$/machine-learning-ex3/ex3/ex3.py" />
+        <option value="$PROJECT_DIR$/machine-learning-ex3/ex3/ex3_nn.py" />
+        <option value="$PROJECT_DIR$/machine-learning-ex3/ex3/predict.py" />
       </list>
     </option>
   </component>
@@ -132,7 +149,13 @@
             <path>
               <item name="venv" type="b2602c69:ProjectViewProjectNode" />
               <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="machine-learning-ex2" type="462c0819:PsiDirectoryNode" />
+              <item name="machine-learning-ex3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="venv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="machine-learning-ex3" type="462c0819:PsiDirectoryNode" />
+              <item name="ex3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -146,6 +169,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/machine-learning-ex3/ex3" />
       <recent name="$PROJECT_DIR$/machine-learning-ex2" />
     </key>
   </component>
@@ -161,7 +185,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ex2">
+  <component name="RunManager" selected="Python.ex3_nn">
     <configuration name="ex1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="venv" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -204,12 +228,58 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ex3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="venv" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/machine-learning-ex3/ex3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/machine-learning-ex3/ex3/ex3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex3_nn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="venv" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/machine-learning-ex3/ex3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/machine-learning-ex3/ex3/ex3_nn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.ex1" />
       <item itemvalue="Python.ex2" />
+      <item itemvalue="Python.ex3" />
+      <item itemvalue="Python.ex3_nn" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ex3_nn" />
+        <item itemvalue="Python.ex3" />
         <item itemvalue="Python.ex2" />
         <item itemvalue="Python.ex1" />
       </list>
@@ -247,7 +317,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" x="0" y="598" width="1419" height="200" id="Run" order="2" visible="true" weight="0.25318065" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994911" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32951653" />
@@ -282,6 +352,17 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/machine-learning-ex1/ex1data2.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -291,13 +372,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/machine-learning-ex1/computeCost.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machine-learning-ex2/sigmoid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/machine-learning-ex1/gradientDescent.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -314,13 +388,6 @@
     <entry file="file://$PROJECT_DIR$/machine-learning-ex2/ex2data1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/machine-learning-ex1/ex1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/machine-learning-ex2/ex2data2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -330,17 +397,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/machine-learning-ex2/costFunctionReg.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machine-learning-ex2/mapFeature.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-          <folding>
-            <marker date="1540695739683" expanded="true" signature="561:566" ph="..." />
-            <marker date="1540695739683" expanded="true" signature="576:581" ph="..." />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/machine-learning-ex2/plotData.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -352,20 +408,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/machine-learning-ex2/ex2.py">
+    <entry file="file://$PROJECT_DIR$/../machine-learning-ex3/ex3/ex3weights.mat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex2/sigmoid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/submit.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-395" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/sigmoid.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/display_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/machine-learning-ex2/costFunction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="285">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="e#961#979#0" expanded="true" />
-            <marker date="1540705133815" expanded="true" signature="1444:1665" ph="..." />
+            <marker date="1541897306964" expanded="true" signature="1324:1643" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex2/mapFeature.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+          <folding>
+            <marker date="1540695739683" expanded="true" signature="561:566" ph="..." />
+            <marker date="1540695739683" expanded="true" signature="576:581" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex2/ex2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="69" column="124" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex1/ex1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/lr_cost_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="62" column="11" lean-forward="true" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+          <folding>
+            <element signature="e#1781#1799#0" expanded="true" />
+            <marker date="1541904916960" expanded="true" signature="1872:1982" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/ex3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+          <folding>
+            <element signature="e#27#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/one_vs_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="78" column="52" lean-forward="true" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+          <folding>
+            <element signature="e#2082#2100#0" expanded="true" />
+            <marker date="1541905245369" expanded="true" signature="2226:2231" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/ex3_nn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#32#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/predict_one_vs_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="45" />
+          <folding>
+            <marker date="1541904235621" expanded="true" signature="1588:1593" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine-learning-ex3/ex3/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#1090#1108#0" expanded="true" />
+            <marker date="1541909602359" expanded="true" signature="1170:1171" ph="..." />
           </folding>
         </state>
       </provider>
